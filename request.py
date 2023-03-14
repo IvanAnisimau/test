@@ -14,4 +14,4 @@ def weather_forecasts(result=''):
 
 
 if __name__ == "__main__":
-    weather_forecasts()
+    print(weather_forecasts())
