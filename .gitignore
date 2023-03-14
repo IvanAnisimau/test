@@ -1,0 +1,20 @@
+# игнорировать venv
+venv/
+
+# игнорировать main.py
+main.py
+
+# игнорировать .idea
+.idea/
+
+# каталоги __pycache__
+__pycache__/
+
+# временные файлы Python
+*.pyc
+*.pyd
+*.pyo
+
+# файлы операционной системы
+Thumbs.db
+.DS_Store
