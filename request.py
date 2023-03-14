@@ -1,17 +1,24 @@
-from urllib.parse import quote as url_encode
 import requests
 
-list_of_destination = ['Лондон', 'аэропорт Шереметьево', 'Череповец']
+cities = ['Лондон',
+          'аэропорт Шереметьево',
+          'Череповец']
+
+payload = {'option': 'n',
+           'option1': 'q',
+           'option2': 'M',
+           'transparency': 'T',
+           'lang': 'ru'}
 
 
-def weather_forecasts(result=''):
-    for i in list_of_destination:
-        url = f"https://wttr.in/{url_encode(i)}?nqMT&lang=ru"  # кодирование URL
-        response = requests.get(url)
+def get_forecasts(weather_forecasts=''):
+    for city in cities:
+        url = f"https://wttr.in/{city}"  # кодирование URL
+        response = requests.get(url, params=payload)
         response.raise_for_status()
-        result += response.text
-    return result
+        weather_forecasts += response.text
+    return weather_forecasts
 
 
 if __name__ == "__main__":
-    print(weather_forecasts())
+    print(get_forecasts())
