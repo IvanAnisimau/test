@@ -4,10 +4,10 @@ cities = ['Лондон',
           'аэропорт Шереметьево',
           'Череповец']
 
-payload = {'option': 'n',
-           'option1': 'q',
-           'option2': 'M',
-           'transparency': 'T',
+payload = {'n': '',
+           'q': '',
+           'M': '',
+           'T': '',
            'lang': 'ru'}
 
 
