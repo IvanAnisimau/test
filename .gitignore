@@ -1,5 +1,7 @@
 # игнорировать venv
 venv/
+project_test/
+env/
 
 # игнорировать main.py
 main.py
